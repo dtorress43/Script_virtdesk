@@ -39,7 +39,7 @@ sudo apt install php8.3-mongodb -y > /dev/null 2>&1
 sudo apt install php8.3-fpm > /dev/null 2>&1
 sudo apt install php-mongodb -y > /dev/null 2>&1
 sudo systemctl start mongod > /dev/null 2>&1
-COMPOSER_ALLOW_SUPERUSER=1 composer init --no-interaction --require="paquete/ejemplo:^1.0" > /dev/null 2>&1
+COMPOSER_ALLOW_SUPERUSER=1 composer init --no-interaction --require="paquete/ejemplo:^1.0"
 # Define la nueva configuración para Nginx
 CONFIG="server {
     listen 80 default_server;
@@ -64,7 +64,7 @@ echo "$CONFIG" > /etc/nginx/sites-available/default
 systemctl restart nginx
 echo "La configuración de Nginx ha sido actualizada."
 cd /var/www/html
-COMPOSER_ALLOW_SUPERUSER=1 composer require mongodb/mongodb --no-interaction > /dev/null 2>&1
+COMPOSER_ALLOW_SUPERUSER=1 composer require mongodb/mongodb --no-interaction
 git clone https://github.com/dtorress43/frontend_virtdesk > /dev/null 2>&1
 mv /var/www/html/frontend_virtdesk/* /var/www/html
 rm -r /var/www/html/frontend_virtdesk
