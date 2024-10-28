@@ -39,7 +39,7 @@ echo "Habilitando MongoDB para el arranque automático..."
 sudo systemctl enable mongod > /dev/null 2>&1
 sudo apt update > /dev/null 2>&1
 sudo apt upgrade -y > /dev/null 2>&1
-cd /var/www/HTML
+cd /var/www/html
 echo "Instalando Composer..."
 sudo apt install composer -y > /dev/null 2>&1
 sudo apt update > /dev/null 2>&1
@@ -73,8 +73,8 @@ echo "$CONFIG" > /etc/nginx/sites-available/default
 systemctl restart nginx
 echo "La configuración de Nginx ha sido actualizada."
 cd /var/www/html
-COMPOSER_ALLOW_SUPERUSER=1 composer require mongodb/mongodb --no-interaction
-git clone https://github.com/dtorress43/frontend_virtdesk
+COMPOSER_ALLOW_SUPERUSER=1 composer require mongodb/mongodb --no-interaction > /dev/null 2>&1
+git clone https://github.com/dtorress43/frontend_virtdesk > /dev/null 2>&1
 mv /var/www/html/frontend_virtdesk/* /var/www/html
 rm -r /var/www/html/frontend_virtdesk
 sudo systemctl restart nginx
