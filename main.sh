@@ -1,4 +1,14 @@
 #!/bin/bash
+
+ascii_text='
+____   ____.__           __      ________                    __    
+\   \ /   /|__|_______ _/  |_    \______ \    ____    ______|  | __
+ \   Y   / |  |\_  __ \\   __\    |    |  \ _/ __ \  /  ___/|  |/ /
+  \     /  |  | |  | \/ |  |      |    `   \\  ___/  \___ \ |    < 
+   \___/   |__| |__|    |__|     /_______  / \___  >/____  >|__|_ \
+|  \/    \/      \/      \/      \/      \/    \/      \/      \/  |
+'
+echo "$ascii_text"
 # Actualizar la lista de paquetes y actualizar el sistema
 echo "Actualizando la lista de paquetes y actualizando el sistema..."
 sudo apt update > /dev/null 2>&1
