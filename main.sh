@@ -29,7 +29,7 @@ echo "Habilitando MongoDB para el arranque automático..."
 sudo systemctl enable mongod > /dev/null 2>&1
 sudo apt update > /dev/null 2>&1
 sudo apt upgrade -y > /dev/null 2>&1
-cd /var/www/HTML
+cd /var/www/html
 echo "Instalando Composer..."
 sudo apt install composer -y > /dev/null 2>&1
 sudo apt update > /dev/null 2>&1
