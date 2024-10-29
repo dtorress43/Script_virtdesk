@@ -29,7 +29,7 @@ echo "Habilitando MongoDB para el arranque automático..."
 sudo systemctl enable mongod > /dev/null 2>&1
 sudo apt update > /dev/null 2>&1
 sudo apt upgrade -y > /dev/null 2>&1
-cd /var/www/html
+cd /var/www/HTML
 echo "Instalando Composer..."
 sudo apt install composer -y > /dev/null 2>&1
 sudo apt update > /dev/null 2>&1
@@ -68,4 +68,4 @@ git clone https://github.com/dtorress43/frontend_virtdesk
 mv /var/www/html/frontend_virtdesk/* /var/www/html
 rm -r /var/www/html/frontend_virtdesk
 sudo systemctl restart nginx
-echo "[+] Todos los comandos se han ejecutado correctamente.
+echo "[+] Todos los comandos se han ejecutado correctamente."
